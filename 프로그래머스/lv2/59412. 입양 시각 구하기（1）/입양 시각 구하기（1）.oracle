@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT to_char(datetime,'HH24') hour, count(*) count 
+from animal_outs 
+WHERE to_char(datetime,'HH24') between 09 and 19 
+group by to_char(datetime,'HH24') 
+order by to_char(datetime,'HH24');
+
